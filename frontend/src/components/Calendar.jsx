@@ -99,7 +99,7 @@ const Calendar = () => {
     const data = { customer, customerEmail, availability };
     setLoading(true);
     axios
-      .put(`http://localhost:5555/session/${id}`, data)
+      .put(`/session/${id}`, data)
       .then(() => {
         enqueueSnackbar("Edited successfully", { variant: "success" });
         window.location.reload();
@@ -114,7 +114,7 @@ const Calendar = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5555/session/search?date=${date}`)
+      .get(`/session/search?date=${date}`)
       .then((res) => {
         setNewDate(res.data);
       })
