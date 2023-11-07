@@ -16,7 +16,7 @@ const SessionMain = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5555/session/search", data)
+      .get("/session/search", data)
       .then((res) => {
         setSession(res.data);
       })
