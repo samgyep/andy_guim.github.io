@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   server:{
     proxy:{
-      '/frontend':'http://localhost:5555'
+      '/backend':'http://localhost:5555'
     }
   },
   plugins: [react()],
