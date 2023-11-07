@@ -13,7 +13,7 @@ const DeleteSession = () => {
   const handleDeleteSession = () => {
     setLoading(true);
     axios
-      .delete(`/session/${id}`)
+      .delete(`http://localhost:5555/session/${id}`)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Deleted Successfully", { variant: "success" });
