@@ -10,7 +10,7 @@ const SignIn = () => {
 
   const handleSubmit = () => {
     axios
-      .get(`/backend/user/${email}`)
+      .get(`/user/${email}`)
       .then((res) => {
         const authPassword = res.data.password;
         if (authPassword == passwordEntered) {
