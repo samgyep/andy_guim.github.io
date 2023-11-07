@@ -30,7 +30,7 @@ const Home = () => {
   useEffect(() => {
     axios
       .get(
-        `/backend/session/search?customerEmail=${customerEmail}`
+        `/session/search?customerEmail=${customerEmail}`
       )
       .then((res) => {
         setSessions(res.data);
