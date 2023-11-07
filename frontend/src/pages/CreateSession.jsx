@@ -32,7 +32,7 @@ const CreateSession = () => {
     };
     setLoading(true);
     axios
-      .post("/session", data)
+      .post("http://localhost:5555/session", data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Created Successfully", { variant: "success" });
@@ -53,7 +53,7 @@ const CreateSession = () => {
 
     setLoading(true);
     axios
-      .post("/session/save_bundle", SessionBundle)
+      .post("http://localhost:5555/session/save_bundle", SessionBundle)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Created Successfully", { variant: "success" });
