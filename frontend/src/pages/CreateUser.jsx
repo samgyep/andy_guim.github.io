@@ -19,7 +19,7 @@ const CreateUser = () => {
 
     setLoading(true);
     axios
-      .post("/backend/user", data)
+      .post("/user", data)
       .then(() => {
         setLoading(false);
 
