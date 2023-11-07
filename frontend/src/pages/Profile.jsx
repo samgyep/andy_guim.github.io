@@ -31,7 +31,7 @@ const Profile = () => {
     }
 
     axios
-      .get(`/user/${email}`)
+      .get(`http://localhost:5555/user/${email}`)
       .then((res) => {
         setId(res.data._id);
         setNewName(res.data.name);
@@ -52,7 +52,7 @@ const Profile = () => {
     };
     setLoading(true);
     axios
-      .put(`/user/${email}`, data)
+      .put(`http://localhost:5555/user/${email}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Edited successfully", { variant: "success" });
