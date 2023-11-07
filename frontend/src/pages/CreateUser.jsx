@@ -19,7 +19,7 @@ const CreateUser = () => {
 
     setLoading(true);
     axios
-      .post("/user", data)
+      .post("http://localhost:5555/user", data)
       .then(() => {
         setLoading(false);
 
