@@ -22,7 +22,7 @@ const EditSession = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:5555/session/search?id=${id}`)
+      .get(`/session/search?id=${id}`)
       .then((res) => {
         setSession(res.data.session);
         setLoading(false);
@@ -45,7 +45,7 @@ const EditSession = () => {
     };
     setLoading(true);
     axios
-      .put(`http://localhost:5555/session/${id}`, data)
+      .put(`/session/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Edited successfully", { variant: "success" });
@@ -62,7 +62,7 @@ const EditSession = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://localhost:5555/user")
+      .get("/user")
       .then((res) => {
         console.log("useEffect3");
 
@@ -79,7 +79,7 @@ const EditSession = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:5555/user/${customerEmail}`)
+      .get(`/user/${customerEmail}`)
       .then((res) => {
         console.log("useEffect3");
 
