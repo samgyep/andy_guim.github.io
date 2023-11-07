@@ -30,7 +30,7 @@ const Home = () => {
   useEffect(() => {
     axios
       .get(
-        `/session/search?customerEmail=${customerEmail}`
+        `http://localhost:5555/session/search?customerEmail=${customerEmail}`
       )
       .then((res) => {
         setSessions(res.data);
