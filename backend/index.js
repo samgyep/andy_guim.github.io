@@ -16,8 +16,7 @@ const app = express();
  //});
 app.use(express.json());
 
-app.use(cors({origin: "http://localhost:5173",
-    methods: ["POST", "GET", "DELETE", "PUT"],}));
+app.use(cors());
 app.get("/", (req, res) => {
   console.log(req);
   return res.status(234).send("Welcome to MERN stack");
