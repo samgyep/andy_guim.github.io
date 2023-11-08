@@ -4,7 +4,7 @@ import userRoute from "./routes/userRoute.js";
 import sessionRoute from "./routes/sessionRoute.js";
 import cors from "cors";
 import dotenv from "dotenv";
-import path from "path";
+//import path from "path";
 
 dotenv.config();
 const __dirname = path.resolve();
@@ -16,7 +16,7 @@ const app = express();
  //});
 app.use(express.json());
 
-app.use(cors());
+//app.use(cors());
 app.get("/", (req, res) => {
   console.log(req);
   return res.status(234).send("Welcome to MERN stack");
