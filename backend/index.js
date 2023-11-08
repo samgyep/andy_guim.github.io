@@ -2,12 +2,12 @@ import express from "express";
 import mongoose from "mongoose";
 import userRoute from "./routes/userRoute.js";
 import sessionRoute from "./routes/sessionRoute.js";
-import cors from "cors";
-import dotenv from "dotenv";
+//import cors from "cors";
+//import dotenv from "dotenv";
 //import path from "path";
 
 dotenv.config();
-const __dirname = path.resolve();
+//const __dirname = path.resolve();
 const app = express();
 //app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
